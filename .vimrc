@@ -34,7 +34,7 @@ syntax on
 
 
 " tabs should ALWAYS be 4 spaces
-set tabstop=8
+set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
@@ -69,4 +69,18 @@ nmap <silent> <Leader>wK <C-w>K
 nmap <silent> <Leader>wJ <C-w>J
 nmap <silent> <Leader>wH <C-w>H
 nmap <silent> <Leader>wL <C-w>L
+
+
+" want to edit other files without saving the current one first
+set hidden
+
+
+" remap pageup pagedown to leader keys
+nmap <silent> <Leader>f <C-f>
+nmap <silent> <Leader>b <C-b>
+
+
+" enable wildmenu
+set wildmenu
+set wildmode=longest:full,full
 
