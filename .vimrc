@@ -1,4 +1,5 @@
 " Be sure to clone vundle from github
+" then run :PluginInstall (or :PluginUpdate as appropriate)
 
 " Vundle package management
 set nocompatible              " be iMproved, required
@@ -9,13 +10,16 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 
 " packages that I like
 
 " python code completion
-Bundle 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+
+" close brackets, please
+Plugin 'jiangmiao/auto-pairs'
 
 
 

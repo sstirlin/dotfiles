@@ -109,7 +109,8 @@
 
 
 ; cpp code should use 4 spaces for indentation, not 2
-(setq-default c-basic-offset 4)
+(setq-default c-default-style "linux"
+              c-basic-offset 4)
 ; disable electric mode
 (setq-default c-electric-flag nil)
 ; load cc mode
