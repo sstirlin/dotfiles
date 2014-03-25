@@ -56,18 +56,17 @@ inoremap <s-tab> <c-d>
 nmap <s-tab> <<
 
 
-" Use ctrl-w [hjkl] to move the active pane
-nmap <silent> <c-w>k :wincmd K<CR>                                                                                                                       
-nmap <silent> <c-w>j :wincmd J<CR>                                                                                                                       
-nmap <silent> <c-w>h :wincmd H<CR>                                                                                                                       
-nmap <silent> <c-w>l :wincmd L<CR>
+" use spacebar as leader key
+let mapleader = "\<Space>"
 
 
-" Use ctrl-[hjkl] to select the active pane
-nnoremap <silent> <c-k> :wincmd k<CR>                                                                                                                       
-nnoremap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nnoremap <silent> <c-h> :wincmd h<CR>                                                                                                                       
-nnoremap <silent> <c-l> :wincmd l<CR>
-
-
+" remap window stuff away from nasty cntrl key and to leader key
+nmap <silent> <Leader>wk <C-w>k
+nmap <silent> <Leader>wj <C-w>j
+nmap <silent> <Leader>wh <C-w>h
+nmap <silent> <Leader>wl <C-w>l
+nmap <silent> <Leader>wK <C-w>K
+nmap <silent> <Leader>wJ <C-w>J
+nmap <silent> <Leader>wH <C-w>H
+nmap <silent> <Leader>wL <C-w>L
 
