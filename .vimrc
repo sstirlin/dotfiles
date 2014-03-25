@@ -56,11 +56,18 @@ inoremap <s-tab> <c-d>
 nmap <s-tab> <<
 
 
-" Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>                                                                                                                       
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
-nmap <silent> <c-l> :wincmd l<CR>
+" Use ctrl-w [hjkl] to move the active pane
+nmap <silent> <c-w>k :wincmd K<CR>                                                                                                                       
+nmap <silent> <c-w>j :wincmd J<CR>                                                                                                                       
+nmap <silent> <c-w>h :wincmd H<CR>                                                                                                                       
+nmap <silent> <c-w>l :wincmd L<CR>
+
+
+" Use ctrl-[hjkl] to select the active pane
+nnoremap <silent> <c-k> :wincmd k<CR>                                                                                                                       
+nnoremap <silent> <c-j> :wincmd j<CR>                                                                                                                       
+nnoremap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nnoremap <silent> <c-l> :wincmd l<CR>
 
 
 
