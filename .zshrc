@@ -68,6 +68,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 
+# tell the world that this is a 256-color terminal
+export TERM=xterm-256color
+
+
 # use vim mode
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode

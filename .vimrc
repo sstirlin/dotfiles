@@ -60,7 +60,7 @@ nmap <s-tab> <<
 let mapleader = "\<Space>"
 
 
-" remap window stuff away from nasty cntrl key and to leader key
+" remap window stuff away from nasty cntrl key.  Use Leader instead
 nmap <silent> <Leader>wk <C-w>k
 nmap <silent> <Leader>wj <C-w>j
 nmap <silent> <Leader>wh <C-w>h
@@ -69,6 +69,24 @@ nmap <silent> <Leader>wK <C-w>K
 nmap <silent> <Leader>wJ <C-w>J
 nmap <silent> <Leader>wH <C-w>H
 nmap <silent> <Leader>wL <C-w>L
+
+
+" map vs and sp to | and -
+nmap <silent> <Leader>w\| :exe "vs"<CR>
+nmap <silent> <Leader>w- :exe "sp"<CR>
+
+
+" remap window resize to leader+arrows
+nmap <silent> <Leader>w<Up> :exe "resize -5"<CR>
+nmap <silent> <Leader>w<Down> :exe "resize +5"<CR>
+nmap <silent> <Leader>w<Left> :exe "vertical resize -5"<CR>
+nmap <silent> <Leader>w<Right> :exe "vertical resize +5"<CR>
+if bufwinnr(1)  " make repeatable 
+    map <Up> <Leader>w<Up>
+    map <Down> <Leader>w<Down>
+    map <Left> <Leader>w<Left>
+    map <Right> <Leader>w<Right>
+endif
 
 
 " want to edit other files without saving the current one first
