@@ -18,13 +18,9 @@ Plugin 'gmarik/vundle'
 " python code completion
 Plugin 'davidhalter/jedi-vim'
 
-" close brackets, please
-Plugin 'jiangmiao/auto-pairs'
-
 
 
 filetype plugin indent on  " required by Vundle
-
 
 " close Omni-Completion tip window when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
@@ -61,41 +57,48 @@ let mapleader = "\<Space>"
 
 
 " remap window stuff away from nasty cntrl key.  Use Leader instead
-nmap <silent> <Leader>wk <C-w>k
-nmap <silent> <Leader>wj <C-w>j
-nmap <silent> <Leader>wh <C-w>h
-nmap <silent> <Leader>wl <C-w>l
-nmap <silent> <Leader>wK <C-w>K
-nmap <silent> <Leader>wJ <C-w>J
-nmap <silent> <Leader>wH <C-w>H
-nmap <silent> <Leader>wL <C-w>L
+"nmap <silent> <Leader>wk <C-w>k
+"nmap <silent> <Leader>wj <C-w>j
+"nmap <silent> <Leader>wh <C-w>h
+"nmap <silent> <Leader>wl <C-w>l
+"nmap <silent> <Leader>wK <C-w>K
+"nmap <silent> <Leader>wJ <C-w>J
+"nmap <silent> <Leader>wH <C-w>H
+"nmap <silent> <Leader>wL <C-w>L
+"nmap <silent> <Leader>wq <C-w>q
+"nmap <silent> <Leader>wo <C-w>o
+"nmap <silent> <Leader>wc <C-w>c
 
 
 " map vs and sp to | and -
-nmap <silent> <Leader>w\| :exe "vs"<CR>
-nmap <silent> <Leader>w- :exe "sp"<CR>
+nmap <silent> <C-w>\| :exe "vs"<CR>
+nmap <silent> <C-w>- :exe "sp"<CR>
+"nmap <silent> <Leader>w\| :exe "vs"<CR>
+"nmap <silent> <Leader>w- :exe "sp"<CR>
 
 
-" remap window resize to leader+arrows
-nmap <silent> <Leader>w<Up> :exe "resize -5"<CR>
-nmap <silent> <Leader>w<Down> :exe "resize +5"<CR>
-nmap <silent> <Leader>w<Left> :exe "vertical resize -5"<CR>
-nmap <silent> <Leader>w<Right> :exe "vertical resize +5"<CR>
+" remap window resize to Ctrl-w+arrows
+nmap <silent> <C-w><Up> :exe "resize -5"<CR>
+nmap <silent> <C-w><Down> :exe "resize +5"<CR>
+nmap <silent> <C-w><Left> :exe "vertical resize -5"<CR>
+nmap <silent> <C-w><Right> :exe "vertical resize +5"<CR>
 if bufwinnr(1)  " make repeatable 
-    map <Up> <Leader>w<Up>
-    map <Down> <Leader>w<Down>
-    map <Left> <Leader>w<Left>
-    map <Right> <Leader>w<Right>
+    map <Up> <C-w><Up>
+    map <Down> <C-w><Down>
+    map <Left> <C-w><Left>
+    map <Right> <C-w><Right>
 endif
+
+
+" for faster switching between buffers
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
 
 
 " want to edit other files without saving the current one first
 set hidden
-
-
-" remap pageup pagedown to leader keys
-nmap <silent> <Leader>f <C-f>
-nmap <silent> <Leader>b <C-b>
 
 
 " enable wildmenu
