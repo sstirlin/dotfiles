@@ -105,3 +105,14 @@ set hidden
 set wildmenu
 set wildmode=longest:full,full
 
+
+" %% expands to current path in command mode
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%' 
+
+
+" faster way to navigate buffers
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
