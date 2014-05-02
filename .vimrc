@@ -116,3 +116,8 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
+
+" store temp files in /tmp PLEASE
+set backupdir=/tmp
+set directory=/tmp
+
