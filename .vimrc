@@ -3,7 +3,7 @@
 
 " Vundle package management
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off                  " Vundle needs this off right now
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
@@ -18,12 +18,19 @@ Plugin 'gmarik/vundle'
 " python code completion
 Plugin 'davidhalter/jedi-vim'
 
+" automatically surround text with matching delimiters, e.g. S" surrounds
+" visual selection with quotes
+Plugin 'tpope/vim-surround'
 
 
-filetype plugin indent on  " required by Vundle
+filetype plugin indent on  " turn this back on (done with Vundle for now)
 
 " close Omni-Completion tip window when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+" enable matchit plugin (jump to matching keywords, e.g. begin/end, using the % command)
+runtime macros/matchit.vim
 
 
 syntax on
