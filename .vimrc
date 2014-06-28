@@ -128,3 +128,7 @@ nnoremap <silent> ]B :blast<CR>
 set backupdir=/tmp
 set directory=/tmp
 
+
+" netrw NEEDS to stop file browsing in a split
+let g:netrw_browse_split = 0
+
