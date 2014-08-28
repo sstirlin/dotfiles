@@ -22,6 +22,9 @@ Plugin 'davidhalter/jedi-vim'
 " visual selection with quotes
 Plugin 'tpope/vim-surround'
 
+"json viewer
+Plugin 'elzr/vim-json'
+
 
 filetype plugin indent on  " turn this back on (done with Vundle for now)
 
