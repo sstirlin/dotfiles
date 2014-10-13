@@ -16,7 +16,9 @@ Plugin 'gmarik/vundle'
 " packages that I like
 
 " python code completion
-"Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
+
+" ipython integration
 Plugin 'ivanov/vim-ipython'
 source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
 
@@ -32,7 +34,6 @@ filetype plugin indent on  " turn this back on (done with Vundle for now)
 
 " close Omni-Completion tip window when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 
 " enable matchit plugin (jump to matching keywords, e.g. begin/end, using the % command)
 runtime macros/matchit.vim
