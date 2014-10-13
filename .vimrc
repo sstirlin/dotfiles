@@ -16,7 +16,9 @@ Plugin 'gmarik/vundle'
 " packages that I like
 
 " python code completion
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'ivanov/vim-ipython'
+source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
 
 " automatically surround text with matching delimiters, e.g. S" surrounds
 " visual selection with quotes
@@ -34,7 +36,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " enable matchit plugin (jump to matching keywords, e.g. begin/end, using the % command)
 runtime macros/matchit.vim
-
 
 syntax on
 
@@ -134,4 +135,7 @@ set directory=/tmp
 
 " netrw NEEDS to stop file browsing in a split
 let g:netrw_browse_split = 0
+
+" turn on syntax code folding
+set foldmethod=syntax
 
