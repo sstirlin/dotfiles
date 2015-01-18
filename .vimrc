@@ -6,12 +6,11 @@ set nocompatible              " be iMproved, required
 filetype off                  " Vundle needs this off right now
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-
+Plugin 'gmarik/Vundle.vim'
 
 " packages that I like
 
