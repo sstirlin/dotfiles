@@ -164,3 +164,6 @@ bindkey '^H' backward-delete-char
 setopt magic_equal_subst
 zstyle :completion::::: completer _complete _files
 
+
+# disable shared history
+setopt no_share_history
