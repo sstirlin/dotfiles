@@ -15,11 +15,11 @@ Plugin 'gmarik/Vundle.vim'
 " packages that I like
 
 " python code completion
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 " ipython integration
-Plugin 'ivanov/vim-ipython'
-source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
+"Plugin 'ivanov/vim-ipython'
+"source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
 
 " automatically surround text with matching delimiters, e.g. S" surrounds
 " visual selection with quotes
