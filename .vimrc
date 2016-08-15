@@ -140,4 +140,4 @@ let g:netrw_browse_split = 0
 set foldmethod=syntax
 
 " line numbering, please
-set number
+set ruler
