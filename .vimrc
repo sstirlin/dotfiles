@@ -28,7 +28,6 @@ Plugin 'tpope/vim-surround'
 "json viewer
 Plugin 'elzr/vim-json'
 
-
 filetype plugin indent on  " turn this back on (done with Vundle for now)
 
 " close Omni-Completion tip window when leaving insert mode
@@ -39,6 +38,8 @@ runtime macros/matchit.vim
 
 syntax on
 
+"if you don't set this then blue comments are too dark
+set background=dark
 
 " tabs should ALWAYS be 4 spaces
 set tabstop=4
