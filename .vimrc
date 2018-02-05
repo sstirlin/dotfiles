@@ -28,7 +28,7 @@ Plugin 'tpope/vim-surround'
 "json viewer
 Plugin 'elzr/vim-json'
 
-filetype plugin indent on  " turn this back on (done with Vundle for now)
+"filetype plugin indent on  " turn this back on (done with Vundle for now)
 
 " close Omni-Completion tip window when leaving insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
