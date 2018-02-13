@@ -82,12 +82,22 @@ nmap <silent> <Leader>wo <C-w>o
 nmap <silent> <Leader>wc <C-w>c
 
 
-" map vs and sp to Leader / and Leader -
-nmap <silent> <Leader>w\/ :exe "vs"<CR>
+" map vs and sp to Leader-w / and Leader-w -
+nmap <silent> <Leader>w/ :exe "vs"<CR>
 nmap <silent> <Leader>w- :exe "sp"<CR>
 
 
-" remap window resize to Ctrl-w+arrows
+" remap window resize to Leader-w (+/- is vertical resize, >< is horizontal resize)
+nmap <silent> <Leader>w< :exe "vertical resize -5"<CR>
+nmap <silent> <Leader>w> :exe "vertical resize +5"<CR>
+nmap <silent> <Leader>w- :exe "resize -5"<CR>
+nmap <silent> <Leader>w+ :exe "resize +5"<CR>
+if bufwinnr(1)  " make repeatable 
+    map + <Leader>w+
+    map - <Leader>w-
+    map > <Leader>w>
+    map < <Leader>w<
+endif
 "nmap <silent> <C-w><Up> :exe "resize -5"<CR>
 "nmap <silent> <C-w><Down> :exe "resize +5"<CR>
 "nmap <silent> <C-w><Left> :exe "vertical resize -5"<CR>
@@ -100,7 +110,7 @@ nmap <silent> <Leader>w- :exe "sp"<CR>
 "endif
 
 " enable mouse for split resizing
-set mouse=n
+"set mouse=n
 
 
 " want to edit other files without saving the current one first
