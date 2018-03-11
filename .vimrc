@@ -87,16 +87,17 @@ nmap <silent> <Leader>w/ :exe "vs"<CR>
 nmap <silent> <Leader>w- :exe "sp"<CR>
 
 
-" remap window resize to Leader-w (+/- is vertical resize, >< is horizontal resize)
-nmap <silent> <Leader>w< :exe "vertical resize -5"<CR>
-nmap <silent> <Leader>w> :exe "vertical resize +5"<CR>
-nmap <silent> <Leader>w- :exe "resize -5"<CR>
-nmap <silent> <Leader>w+ :exe "resize +5"<CR>
+" remap window resize to Leader-w-. ({ and } are vertical resize, [ and ] are horizontal resize)
+" matches spacemacs
+nmap <silent> <Leader>w.[ :exe "vertical resize -5"<CR>
+nmap <silent> <Leader>w.] :exe "vertical resize +5"<CR>
+nmap <silent> <Leader>w.{ :exe "resize -5"<CR>
+nmap <silent> <Leader>w.} :exe "resize +5"<CR>
 if bufwinnr(1)  " make repeatable 
-    map + <Leader>w+
-    map - <Leader>w-
-    map > <Leader>w>
-    map < <Leader>w<
+    map [ <Leader>w.[
+    map ] <Leader>w.]
+    map { <Leader>w.{
+    map } <Leader>w.}
 endif
 "nmap <silent> <C-w><Up> :exe "resize -5"<CR>
 "nmap <silent> <C-w><Down> :exe "resize +5"<CR>
@@ -143,3 +144,10 @@ set ruler
 " make sure scrolling puts line above/below when scrolling (just looks nicer)
 set scrolloff=1
 set sidescrolloff=5
+
+" ENABLE clipboard under Leader+o+y (yank to clipboard) or Leader+o+p (paste from clipboard)
+" in Linux must have xsel installed!
+" Copy to X CLIPBOARD
+map <silent> <Leader>oy :w !xsel -i -b<CR><CR>
+" Paste from X CLIPBOARD
+map <silent> <Leader>op :.-1r !xsel -o -b<CR>
