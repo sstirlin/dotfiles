@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     javascript
      markdown
      python
      clojure
@@ -58,7 +59,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+     (dired+ :location (recipe :fetcher url :url "https://www.emacswiki.org/emacs/download/dired+.el"))
+   )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -358,6 +361,22 @@ you should place your code here."
 
   ;; make sure underscores are respected as part of a word
   (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
+  ;; force dired+ to reuse directories when navigating
+  (diredp-toggle-find-file-reuse-dir 1)
+
+  (defun mydired-sort ()
+  "Sort dired listings with directories first."
+  (save-excursion
+    (let (buffer-read-only)
+      (forward-line 2) ;; beyond dir. header 
+      (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
+    (set-buffer-modified-p nil)))
+
+  (defadvice dired-readin
+    (after dired-after-updating-hook first () activate)
+    "Sort dired listings with directories first before adding marks."
+    (mydired-sort))
 )
 
 
